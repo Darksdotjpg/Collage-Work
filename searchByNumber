@@ -1,0 +1,61 @@
+<!doctype html>
+<!--Andrew 19024825-->
+
+<html lang = "en-GB">
+<!-- <link rel="stylesheet" href = "CSS/style.css"> -->
+<head>
+        <meta charset="UTF-8">
+
+            
+    <title> Arrays </title>
+ 
+</head>
+
+<body>
+    <script src="js/arrayjs.js"></script>
+
+    <input id="nameSearch"></input>
+
+    <button type="button" onclick="result()">Go!</button>
+
+    <p id="shortenedText"></p>
+
+    <!-- •Enquire the member number in a box on the form  i.e. their position on the list remembering that an array also runs from element 0 (just like the loop counter) and return the corresponding name on the list (This is artificial and very unlikely…)
+
+•Amend your program to check for the number of names on the list and alert the user if s/he requests a number greater than the number on the list
+
+•Check also for a negative value being specified (there’s always one wag in the group)-->
+
+</body>
+
+
+</html>
+
+function result() {
+    
+    var names = ['Andrew','Lili','Damon','Stephen','Brodie','Piotr','Drew','Bianca','Nathan'];
+    var nameChoice;
+
+    nameChoice = document.getElementById("nameSearch").value
+
+        for (i = 0 ;i < names.length ; i++) {
+            if (isNaN(nameChoice) || nameChoice < 0 || nameChoice > names.length) {
+                text = "Invalid Input, try again"
+            }
+        
+            else {
+                text = "The name of the student with the corresponding member id is " + names[nameChoice]
+            }
+
+        
+    }
+
+document.getElementById("shortenedText").innerHTML = text;
+
+}
+
+
+
+// nameChoice is the number that coresponds to a name
+// names is the list of names
+// nameSearch i don't remember gl
